@@ -15,3 +15,24 @@ Kemudian untuk mengakses directory tersebut pada web server dengan mengakses URL
 
 ![localhost](asset/img/localhost.png)
 
+### 3. PHP Dasar
+Buat file baru dengan nama *dasar.php* pada directory tersebut. Kemudian buat kode seperti berikut. 
+
+```php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Dasar</title>
+</head>
+<body>
+    <h1>Belajar PHP Dasar</h1>
+    <?php
+        echo "Hello world";
+    ?>
+</body>
+</html>
+```
+Kemudian untuk mengakses hasilnya melali URL: http://localhost/lab7_php_dasar/dasar.php
+
+![dasarPHP](asset/img/dasarPHP.png)
