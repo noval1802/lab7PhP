@@ -48,3 +48,14 @@ Kemudian untuk mengakses hasilnya melali URL: http://localhost/lab7_php_dasar/da
 ```
 ![variablePHP](asset/img/variablePHP.png)
 
+### 5. predifine Variable $_GET
+
+```php
+<?php
+echo 'Selamat Datang ' . $_GET['nama'];
+?>
+```
+Untuk mengaksesnya gunakan URL:
+http://localhost/lab7_php_dasar/latihan2.php?nama=Noval
+
+![predifineVariableGET](asset/img/predifineVariableGET.png)
