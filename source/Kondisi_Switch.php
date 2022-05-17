@@ -9,11 +9,10 @@
 <body>
     <h2>Kondisi Switch</h2>
     <?php
-    $nama_hari = date("1");
+    $nama_hari = date("l");
     switch ($nama_hari) {
         case "Sunday":
-            break;
-            echo "minggu";
+            echo "Minggu";
             break;
         case "Monday":
             echo "Senin";
@@ -24,6 +23,7 @@
         default:
             echo "Sabtu";
     }
+    echo "/$nama_hari";
     ?>
 </body>
 

@@ -2,13 +2,13 @@
 
 ## Langkah Langkah Menggunakan XMPP Dengan Menggunakan Format Dokumen (.php)
 
-### 1. Menjalankan Web Server
+### Menjalankan Web Server
 
 Untuk menjalankan web server dari menu XAMPP Control
 
 ![xmpp](asset/img/xmppServer.png)
 
-### 2. Memulai PHP
+### Memulai PHP
 
 Buat folder **lab7_php_dasar** pada root directory web server **(c:\xampp\htdocs)**.
 
@@ -17,7 +17,7 @@ Kemudian untuk mengakses directory tersebut pada web server dengan mengakses URL
 
 ![localhost](asset/img/localhost.png)
 
-### 3. PHP Dasar
+### PHP Dasar
 
 Buat file baru dengan nama _dasar.php_ pada directory tersebut. Kemudian buat kode seperti berikut.
 
@@ -41,7 +41,7 @@ Kemudian untuk mengakses hasilnya melali URL: http://localhost/lab7_php_dasar/da
 
 ![dasarPHP](asset/img/dasarPHP.png)
 
-### 4. Variable PHP
+### Variable PHP
 
 Menambahkan variable pada program.
 
@@ -56,7 +56,7 @@ Menambahkan variable pada program.
 
 ![variablePHP](asset/img/variablePHP.png)
 
-### 5. predifine Variable $\_GET
+### predifine Variable $\_GET
 
 ```php
 <?php
@@ -69,7 +69,7 @@ http://localhost/lab7_php_dasar/latihan2.php?nama=Noval
 
 ![predifineVariableGET](asset/img/predifineVariableGET.png)
 
-### 6. Membuat Form Input
+### Membuat Form Input
 
 ```php
 <!DOCTYPE html>
@@ -98,7 +98,7 @@ http://localhost/lab7_php_dasar/latihan2.php?nama=Noval
 
 ![FormInput](asset/img/FormInput.png)
 
-### 7. Oprator
+### Oprator
 
 ```php
 <!DOCTYPE html>
@@ -124,7 +124,7 @@ http://localhost/lab7_php_dasar/latihan2.php?nama=Noval
 ```
 ![oprator_gaji](asset/img/oprator.png)
 
-### 8. Kondisi IF
+### Kondisi IF
 
 ```php
   <h2>Kondisi IF</h2>
@@ -140,6 +140,46 @@ http://localhost/lab7_php_dasar/latihan2.php?nama=Noval
     ?>
 ```
 ![Kondisi_if](asset/img/Kondisi_if.png)
+
+### Kondisi Switch
+
+```php
+<?php
+    $nama_hari = date("1");
+    switch ($nama_hari) {
+        case "Sunday":
+            break;
+            echo "minggu";
+            break;
+        case "Monday":
+            echo "Senin";
+            break;
+        case "Tuesday":
+            echo "Selasa";
+            break;
+        default:
+            echo "Sabtu";
+    }
+    echo"/$nama_hari";
+    ?>
+```
+![Kondisi_Switch](asset/img/Kondisi_switch.png)
+
+### Penfulangan For
+
+```php
+<?php
+    echo "Perulangan 1 sampai 10 <br />";
+    for ($i = 1; $i <= 10; $i++) {
+        echo "Perulangan ke: " . $i . '<br />';
+    }
+    echo "Perulangan Menurun dari 10 ke 1 <br />";
+    for ($i = 10; $i >= 1; $i--) {
+        echo "Perulangan ke: " . $i . '<br />';
+    }
+    ?>
+```
+![Pengulangan_for](asset/img/Pengulangan_for.png)
 
 # Pertanyaan dan Tugas
 
