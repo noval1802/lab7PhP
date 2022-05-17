@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <h2>Perulangan while</h2>
+    <h2>Perulangan Dowhile</h2>
     <?php
     echo "Perulangan 1 sampai 10 <br />";
     $i = 1;
