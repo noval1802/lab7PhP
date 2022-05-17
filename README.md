@@ -124,6 +124,23 @@ http://localhost/lab7_php_dasar/latihan2.php?nama=Noval
 ```
 ![oprator_gaji](asset/img/oprator.png)
 
+### 8. Kondisi IF
+
+```php
+  <h2>Kondisi IF</h2>
+    <?php
+    $nama_hari = date("l");
+    if ($nama_hari == "Sunday") {
+        echo "Minggu";
+    } elseif ($nama_hari == "Monday") {
+        echo "Senin";
+    } else {
+        echo "Selasa";
+    }
+    ?>
+```
+![Kondisi_if](asset/img/Kondisi_if.png)
+
 # Pertanyaan dan Tugas
 
 Buatlah program PHP sederhana dengan menggunakan form input yang menampilkan nama, tanggal lahir dan pekerjaan. Kemudian tampilkan outputnya dengan menghitung umur berdasarkan inputan tanggal lahir. Dan pilihan pekerjaan dengan gaji yang berbeda-beda sesuai pilihan pekerjaan.
