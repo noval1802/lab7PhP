@@ -165,7 +165,7 @@ http://localhost/lab7_php_dasar/latihan2.php?nama=Noval
 ```
 ![Kondisi_Switch](asset/img/Kondisi_switch.png)
 
-### Penfulangan For
+### Pengulangan For
 
 ```php
 <?php
@@ -180,6 +180,20 @@ http://localhost/lab7_php_dasar/latihan2.php?nama=Noval
     ?>
 ```
 ![Pengulangan_for](asset/img/Pengulangan_for.png)
+
+### Pengulangan While 
+
+```php
+<?php
+    echo "Perulangan 1 sampai 10 <br />";
+    $i = 1;
+    while ($i <= 10) {
+        echo "Perulangan ke: " . $i . '<br />';
+        $i++;
+    }
+    ?>
+```
+![Pengulangan_while](asset/img/Pengulangan_while.png)
 
 # Pertanyaan dan Tugas
 
