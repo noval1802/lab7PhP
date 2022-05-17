@@ -195,6 +195,21 @@ http://localhost/lab7_php_dasar/latihan2.php?nama=Noval
 ```
 ![Pengulangan_while](asset/img/Pengulangan_while.png)
 
+### Pengulangan Dowhile
+
+```php
+ </h2>
+    <?php
+    echo "Perulangan 1 sampai 10 <br />";
+    $i = 1;
+    do {
+        echo "Perulangan ke: " . $i . '<br />';
+        $i++;
+    } while ($i <= 10);
+    ?>
+```
+![Pengulangan_dowhile](asset/img/Pengulangan_dowhile.png)
+
 # Pertanyaan dan Tugas
 
 Buatlah program PHP sederhana dengan menggunakan form input yang menampilkan nama, tanggal lahir dan pekerjaan. Kemudian tampilkan outputnya dengan menghitung umur berdasarkan inputan tanggal lahir. Dan pilihan pekerjaan dengan gaji yang berbeda-beda sesuai pilihan pekerjaan.
