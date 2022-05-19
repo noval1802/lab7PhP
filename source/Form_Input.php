@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Competible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Input</title>
 </head>
 
@@ -11,13 +13,12 @@
     <form class="form" method="post">
         <table align="center">
             <td>
-                <h2> <b>Form Biodata</h2>
+                <h2><b>Form Biodata</b></h2>
             </td>
-            <tr></tr>
-            <table width="450" border="0" cellpadding="0" cellspacing="10" align="center">
+            <table width="450" border="0" cellpadding="1" cellspacing="10" align="center">
                 <!--Table Nama-->
                 <tr>
-                    <td>Nama</td>
+                    <td>Nama </td>
                     <td> : </td>
                     <td><input name="nama" type="text" size="40" /></td>
                 </tr>
@@ -27,7 +28,7 @@
                 <tr>
                     <td>Tanggal Lahir</td>
                     <td> : </td>
-                    <td><input name="tgl_lahir" type="text" size="40"/></td>
+                    <td><input name="tgl_lahir" type="text" size="40" /></td>
                 </tr>
                 <!--End Table Tanggal lahir-->
 
@@ -37,12 +38,12 @@
                     <td> : </td>
                     <td>
                         <select name="pekerjaan">
-                            <option value="-">>---Pilih Pekerjaan---<</option>
-                            <option value='Graphic Designer'>Graphic Designer</option>
-                            <option value='Staff Admin'>Staff Admin</option>
-                            <option value='HRD'>HRD</option>
-                            <option value='Maintenance'>Maintenance</option>
-                            <option value="QC">QC</option>
+                            <option value="-">Pilih Pekerjaan</option>
+                            <option value='Cloud computing engineer'>Cloud computing engineer</option>
+                            <option value='Database administrator'>Database administrator</option>
+                            <option value='Computer network specialists'>Computer network specialists</option>
+                            <option value='Computer support specialists'>Computer support specialists</option>
+                            <option value="Software/Application developer">Software/Application developer</option>
                         </select>
                     </td>
                 </tr>
@@ -57,38 +58,46 @@
         </table>
     </form>
     <!--END Table Form-->
+
+    <!--Memposting nama yang sudah di inputkan-->
+    <?php
+    echo "Nama : " . $_POST["nama"];
+    ?>
+    <!--Memposting nama yang sudah di inputkan-->
+    <br>
+    <!--Memanggil output dari tgl lahir dan menghitung umur-->
+    <?php
+    $tgl_lahir = @$_POST["tgl_lahir"];
+
+    $lahir = new DateTime($tgl_lahir);
+    $hari_ini = new DateTime();
+    $diff = $hari_ini->diff($lahir);
+    echo "Umur : " . $diff->y . "Tahun";
+    ?>
+    <!--Memanggil output dari tgl lahir dan menghitung umur-->
+    <br>
+    <!--Memanggil form pekerjaan yang sudah di inputkan-->
+    <?php
+    echo "pekerjaan : " . $_POST["pekerjaan"];
+    $pekerjaan = @$_POST["pekerjaan"];
+    ?>
+    <!--Memanggil form pekerjaan yang sudah di inputkan-->
+
+    <!--Menampilkan gaji berdasarkan pekerjaan yang dipilih-->
+    <?php
+    if ($pekerjaan == "Cloud computing engineer") {
+        echo '<br> Gaji : Rp. 9.000.000,-';
+    } elseif ($pekerjaan == "Database administrator") {
+        echo '<br> Gaji : Rp. 5.300.000,-';
+    } elseif ($pekerjaan == "Computer network specialists") {
+        echo '<br> Gaji : Rp. 4.000.000,-';
+    } elseif ($pekerjaan == "Computer support specialists") {
+        echo '<br> Gaji : Rp. 4.000.000,-';
+    } elseif ($pekerjaan == "Software/Application developer") {
+        echo '<br> Gaji : Rp. 5.300.000,-';
+    }
+    ?>
+    <!--Menampilkan gaji berdasarkan pekerjaan yang dipilih-->
 </body>
 
 </html>
-<tr>
-    <td align="center" colspan="2"></td>
-    <?php
-echo "<b>Hasil Biodata yang di Inputkan</b>"
-?>
-</tr>
-<?php
-echo "Nama: " . $_POST["nama"];
-
-$tgl_lahir = @$_POST["tgl_lahir"];
-
-$lahir = new DateTime($tgl_lahir);
-$hari_ini = new DateTime();
-
-$diff = $hari_ini->diff($lahir);
-echo "Umur: " . $diff->y . "Tahun";
-
-echo "pekerjaan: " . $_POST["pekerjaan"];
-$pekerjaan = @$_POST["pekerjaan"];
-
-if ($pekerjaan == "Graphic Designer") {
-    echo '<br> Gaji: Rp. 15.000.000,-';
-} elseif ($pekerjaan == "Staff Admin") {
-    echo '<br> Gaji: Rp. 7.500.000,-';
-} elseif ($pekerjaan == "HRD") {
-    echo '<br> Gaji: Rp. 10.000.000,-';
-} elseif ($pekerjaan == "Maintenance") {
-    echo '<br> Gaji: Rp. 9.000.000,-';
-} elseif ($pekerjaan == "QC") {
-    echo '<br> Gaji: Rp. 7.000.000,-';
-}
-?>
