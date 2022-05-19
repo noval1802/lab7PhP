@@ -62,7 +62,7 @@
 </html>
 <tr>
     <td align="center" colspan="2"></td>
-<?php
+    <?php
 echo "<b>Hasil Biodata yang di Inputkan</b>"
 ?>
 </tr>
